@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = UniqueEmailValidator.class)
 @Documented
 public @interface UniqueEmail {
-    String message() default "{ unique.email.message.key }";
+    String message() default "{unique.email.message.key}";
 
     Class<?>[] groups() default { };
 

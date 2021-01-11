@@ -5,7 +5,6 @@ import com.example.entity.User;
 import com.example.mapper.UserMapper;
 import com.example.service.UserService;
 import com.example.web.resource.UserResource;
-import org.mapstruct.factory.Mappers;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -24,7 +23,7 @@ public class UserController {
     }
 
     @PostMapping("/users")
-    public Long addUser(@RequestBody @Validated UserResource userResource) {
+    public Long addUser(@Validated @RequestBody UserResource userResource) {
         User user = UserMapper.INSTANCE.toUser(userResource);
         return userService.save(user);
     }

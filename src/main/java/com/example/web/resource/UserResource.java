@@ -31,9 +31,6 @@ public class UserResource {
     @Pattern(regexp = "[a-z-A-Z]*", message = "First name has invalid characters")
     private String firstName;
 
-    @Pattern(regexp = "[a-z-A-Z]*", message = "Middle name has invalid characters")
-    private String middleName;
-
     @NotEmpty(message = "Last name is compulsory")
     @Pattern(regexp = "[a-z-A-Z]*", message = "Last name has invalid characters")
     private String lastName;
@@ -43,6 +40,5 @@ public class UserResource {
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "yyyy-MM-dd")
     @CheckDateFormat(pattern = "yyyy-MM-dd")
-    @Past
     private String dob;
 }
