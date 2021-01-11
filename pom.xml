@@ -9,8 +9,8 @@
         <relativePath/>
     </parent>
     <groupId>com.example</groupId>
-    <artifactId>spring-boot-rest</artifactId>
-    <name>spring-boot-rest</name>
+    <artifactId>jsr-validations</artifactId>
+    <name>jsr-validations</name>
 
     <properties>
         <java.version>1.8</java.version>

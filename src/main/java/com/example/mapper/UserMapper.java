@@ -11,7 +11,7 @@ public interface UserMapper {
 
     UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
-    @Mapping(target = "dob", dateFormat = "dd/MM/yyyy")
+    @Mapping(target = "dob", dateFormat = "yyyy-MM-dd")
     User toUser(UserResource userResource);
 
 }

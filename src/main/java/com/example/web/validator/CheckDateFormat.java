@@ -10,7 +10,7 @@ import java.lang.annotation.*;
 @Constraint(validatedBy = CheckDateValidator.class)
 @Documented
 public @interface CheckDateFormat {
-    String message() default "{dateformat.message.key}";
+    String message() default "dateformat.message.key";
 
     Class<?>[] groups() default { };
 

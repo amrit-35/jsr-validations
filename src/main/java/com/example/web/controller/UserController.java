@@ -22,7 +22,7 @@ public class UserController {
         this.userService = userService;
     }
 
-    @PostMapping("/users")
+    @PostMapping("/user")
     public Long addUser(@Validated @RequestBody UserResource userResource) {
         User user = UserMapper.INSTANCE.toUser(userResource);
         return userService.save(user);
